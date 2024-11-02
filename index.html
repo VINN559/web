@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beranda - Kelas 8.3</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background: linear-gradient(to bottom, #6a0dad, #1e90ff, #ffffff);
+
+        }
+
+        details {
+            background: white;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        summary {
+            cursor: pointer;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Gaya untuk running text */
+        .running-text {
+            white-space: nowrap;
+            overflow: hidden;
+            box-sizing: border-box;
+            background-color: #4e5d6c !important;
+            color: white;
+            padding: 0.5rem;
+        }
+
+        .running-text span {
+            display: inline-block;
+            animation: marquee 15s linear infinite;
+        }
+
+        @keyframes marquee {
+            0% {
+                transform: translateX(100%);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+    </style>
+</head>
+
+<body class="flex flex-col min-h-screen">
+    <!-- Navbar -->
+
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <style>
+            body {
+                font-family: 'Poppins', sans-serif;
+            }
+        </style>
+    </head>
+
+    <nav class="bg-gradient-to-r from-blue-500 to-blue-300 shadow-lg">
+        <div class="max-w-6xl mx-auto px-4 flex justify-between items-center py-4">
+            <span class="font-semibold text-white text-2xl">Kelas 8.3</span>
+            <button class="md:hidden text-white focus:outline-none" id="menu-toggle">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+        <div class="hidden md:flex space-x-8">
+            <div class="flex space-x-4">
+                <a href="https://chat.whatsapp.com/G2uaN3YUU6FLC2YwVQuIKQ"
+                    class="text-white hover:text-blue-900 transition duration-300 ease-in-out">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+                <a href="https://www.instagram.com/8.3_charming?igsh=d2lxZDJ0MDVyMmly"
+                    class="text-white hover:text-blue-900 transition duration-300 ease-in-out">
+                    <i class="fab fa-instagram"></i> Instagram
+                </a>
+                <a href="https://chat.openai.com/"
+                    class="text-white hover:text-blue-900 transition duration-300 ease-in-out">
+                    <i class="fas fa-robot"></i> ChatGPT
+                </a>
+            </div>
+        </div>
+        <div id="mobile-menu"
+            class="hidden md:hidden bg-white text-gray-800 absolute w-full left-0 z-10 transition-transform transform origin-top">
+            <div class="flex flex-col">
+                <a href="https://chat.whatsapp.com/G2uaN3YUU6FLC2YwVQuIKQ"
+                    class="block px-4 py-2 hover:bg-gray-200 transition duration-200">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+                <a href="https://www.instagram.com/8.3_charming?igsh=d2lxZDJ0MDVyMmly"
+                    class="block px-4 py-2 hover:bg-gray-200 transition duration-200">
+                    <i class="fab fa-instagram"></i> Instagram
+                </a>
+                <a href="https://chat.openai.com/" class="block px-4 py-2 hover:bg-gray-200 transition duration-200">
+                    <i class="fas fa-robot"></i> ChatGPT
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function () {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('transform');
+            mobileMenu.classList.toggle('transition-transform');
+        });
+    </script>
+
+
+    <!-- Konten Utama -->
+    <!-- Running Text -->
+    <div class="running-text bg-blue-600 text-white py-2">
+        <span>"Selamat Datang Di Kelas 8.3!! Cek Jadwal Pelajaran Dan Jangan Lupa Untuk Mempersiapkan Bahan
+            Belajarmu!"</span>
+    </div>
+
+
+    <!-- Konten Utama -->
+    <div class="container mx-auto px-4 py-8">
+        <!-- Informasi Kelas -->
+        <details close>
+            <summary class="text-2xl font-bold mb-4 text-blue-600 cursor-pointer">Informasi Kelas</summary>
+            <div class="bg-white rounded-lg shadow-md p-6 mb-6" id="informasi-kelas">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <h3 class="font-semibold mb-2">Wali Kelas</h3>
+                        <p>Ahmad Mussofa</p>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold mb-2">Ketua Kelas</h3>
+                        <p>Albertus Kevin Daniswara</p>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold mb-2">Wakil Ketua Kelas</h3>
+                        <p>Aulia Isra Supandi</p>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold mb-2">Sekretaris</h3>
+                        <p>Sahira Aulya</p>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold mb-2">Wakil Sekretaris</h3>
+                        <p>Reyhan Rahadian Maulana Saputra</p>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold mb-2">Bendahara</h3>
+                        <p>Muamar Khaikal Al-Kahfi</p>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold mb-2">Wakil Bendahara</h3>
+                        <p>Siti Maulinda</p>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold mb-2">Keamanan</h3>
+                        <p>Bayu Saktiawan</p>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold mb-2">Wakil Keamanan</h3>
+                        <p>Siti Hanna</p>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold mb-2">Kebersihan</h3>
+                        <p>Muhamad Fauzan Faddilah</p>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold mb-2">Wakil Kebersihan</h3>
+                        <p>Septia Fitriani</p>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold mb-2">Rohis</h3>
+                        <p>Febrian Aryanto</p>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold mb-2">Wakil Rohis</h3>
+                        <p>Andien Mauliddina Rizki</p>
+                    </div>
+                </div>
+            </div>
+        </details>
+
+        <!-- Jadwal Pelajaran -->
+        <details close>
+            <summary>Jadwal Pelajaran</summary>
+            <div class="bg-white rounded-lg shadow-md p-6 mb-6" id="jadwal-pelajaran">
+                <h2 class="text-2xl font-bold mb-4 text-blue-600 cursor-pointer">Jadwal Pelajaran</h2>
+                <div class="overflow-x-auto">
+                    <table class="min-w-full border-collapse border border-gray-300">
+                        <thead>
+                            <tr class="bg-gray-100">
+                                <th class="py-2 px-4 border border-gray-300 text-left">Hari</th>
+                                <th class="py-2 px-4 border border-gray-300 text-left">Mata Pelajaran</th>
+                                <th class="py-2 px-4 border border-gray-300 text-left">Guru</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="py-2 px-4 border border-gray-300">Senin</td>
+                                <td class="py-2 px-4 border border-gray-300">Ilmu Pengetahuan Sosial</td>
+                                <td class="py-2 px-4 border border-gray-300">Ibu Nurjihan S.Pd</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="py-2 px-4 border border-gray-300">-</td>
+                                <td class="py-2 px-4 border border-gray-300">Matematika</td>
+                                <td class="py-2 px-4 border border-gray-300">Ibu Nurwanti Ayu M S.Pd</td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 px-4 border border-gray-300">-</td>
+                                <td class="py-2 px-4 border border-gray-300">Bahasa Sunda</td>
+                                <td class="py-2 px-4 border border-gray-300">Ibu Siska S.Pd.I</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="py-2 px-4 border border-gray-300">-</td>
+                                <td class="py-2 px-4 border border-gray-300">Bahasa Inggris</td>
+                                <td class="py-2 px-4 border border-gray-300">Miss Naely U M S.Pd.I</td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 px-4 border border-gray-300">Selasa</td>
+                                <td class="py-2 px-4 border border-gray-300">Pendidikan Kewarganegaraan</td>
+                                <td class="py-2 px-4 border border-gray-300">Pak Mussofa S.Pd.I</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="py-2 px-4 border border-gray-300">-</td>
+                                <td class="py-2 px-4 border border-gray-300">Ilmu Pengetahuan Alam</td>
+                                <td class="py-2 px-4 border border-gray-300">Ibu Elisza S.Pd</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="py-2 px-4 border border-gray-300">-</td>
+                                <td class="py-2 px-4 border border-gray-300">Pendidikan Agama Islam</td>
+                                <td class="py-2 px-4 border border-gray-300">Ibu Anita Rahayu S.Pd.I</td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 px-4 border border-gray-300">Rabu</td>
+                                <td class="py-2 px-4 border border-gray-300">Bahasa Indonesia</td>
+                                <td class="py-2 px-4 border border-gray-300">Ibu Yolanda Lebertian S.Pd</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="py-2 px-4 border border-gray-300">-</td>
+                                <td class="py-2 px-4 border border-gray-300">Seni Budaya</td>
+                                <td class="py-2 px-4 border border-gray-300">Ibu Suryani Oktaviani</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="py-2 px-4 border border-gray-300">-</td>
+                                <td class="py-2 px-4 border border-gray-300">Pendidikan Jasmani</td>
+                                <td class="py-2 px-4 border border-gray-300">Pak Dede Bunyamin S.Pd</td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 px-4 border border-gray-300">Kamis</td>
+                                <td class="py-2 px-4 border border-gray-300">Ilmu Pengetahuan Alam</td>
+                                <td class="py-2 px-4 border border-gray-300">Ibu Elisza S.Pd</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="py-2 px-4 border border-gray-300">-</td>
+                                <td class="py-2 px-4 border border-gray-300">Bahasa Inggris</td>
+                                <td class="py-2 px-4 border border-gray-300">Miss Naely U M S.Pd.I</td>
+                            </tr>
+                            <tr>
+                            <tr class="bg-gray-50">
+                                <td class="py-2 px-4 border border-gray-300">-</td>
+                                <td class="py-2 px-4 border border-gray-300">Matematika</td>
+                                <td class="py-2 px-4 border border-gray-300">Ibu Nurwanti Ayu M S.Pd</td>
+                            </tr>
+                            <tr>
+                            <tr class="bg-gray-50">
+                                <td class="py-2 px-4 border border-gray-300">-</td>
+                                <td class="py-2 px-4 border border-gray-300">Informatika</td>
+                                <td class="py-2 px-4 border border-gray-300">Pak Rizky Magfiroh S.I.Kom</td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 px-4 border border-gray-300">Jumat</td>
+                                <td class="py-2 px-4 border border-gray-300">Informatika</td>
+                                <td class="py-2 px-4 border border-gray-300">Pak Rizky Magfiroh S.I.Kom</td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 px-4 border border-gray-300">-</td>
+                                <td class="py-2 px-4 border border-gray-300">Ilmu Pengetahuan Sosial</td>
+                                <td class="py-2 px-4 border border-gray-300">Ibu Nurjihan S.Pd</td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 px-4 border border-gray-300">-</td>
+                                <td class="py-2 px-4 border border-gray-300">Bahasa Indonesia</td>
+                                <td class="py-2 px-4 border border-gray-300">Ibu Yolanda Lebertian S.Pd</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </details>
+
+        <!-- Jadwal Piket -->
+        <details close>
+            <summary>Jadwal Piket</summary>
+            <div class="bg-white rounded-lg shadow-md p-6 mb-6" id="jadwal-piket">
+                <h2 class="text-2xl font-bold mb-4 text-blue-600 cursor-pointer">Jadwal Piket</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <h3 class="font-semibold mb-2">Senin</h3>
+                        <p>Kevin</p>
+                        <p>Bayu</p>
+                        <p>Hayfa</p>
+                        <p>Haikal</p>
+                        <p>Prabu</p>
+                        <p>Rizki</p>
+                        <p>Septia</p>
+                        <p>Widya</p>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold mb-2">Selasa</h3>
+                        <p>Alya</p>
+                        <p>Devara</p>
+                        <p>Jovanka</p>
+                        <p>Fauzan</p>
+                        <p>Rapi</p>
+                        <p>Robi</p>
+                        <p>Shalsabela</p>
+                        <p>Zhahira</p>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold mb-2">Rabu</h3>
+                        <p>Alycia</p>
+                        <p>Evita</p>
+                        <p>Owen</p>
+                        <p>Ibnu</p>
+                        <p>Resti</p>
+                        <p>Safa</p>
+                        <p>Hanna</p>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold mb-2">Kamis</h3>
+                        <p>Andien</p>
+                        <p>Fanny</p>
+                        <p>Syahril</p>
+                        <p>Fayumi</p>
+                        <p>Reyhan</p>
+                        <p>Sahira</p>
+                        <p>Linda</p>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold mb-2">Jumat</h3>
+                        <p>Aulia</p>
+                        <p>Febri</p>
+                        <p>Marsya</p>
+                        <p>Novi</p>
+                        <p>Sandi</p>
+                        <p>Salma</p>
+                        <p>Nurul</p>
+                    </div>
+                </div>
+            </div>
+        </details>
+
+        <!-- Jadwal Seragam -->
+        <details close>
+            <summary>Jadwal Seragam</summary>
+            <div class="bg-white rounded-lg shadow-md p-6 mb-6" id="seragam">
+                <h2 class="text-2xl font-bold mb-4 text-blue-600 cursor-pointer">Seragam</h2>
+                <ul class="list-disc pl-5">
+                    <li>Senin: Baju Putih Biru</li>
+                    <li>Selasa: Baju Batik</li>
+                    <li>Rabu: Baju Putih Biru Dan Rompi</li>
+                    <li>Kamis: Baju Pramuka</li>
+                    <li>Jumat: Baju Muslim</li>
+                </ul>
+            </div>
+        </details>
+
+        <!-- Jadwal Ekstrakurikuler -->
+        <details close>
+            <summary>Jadwal Ekstrakurikuler</summary>
+            <div class="bg-white rounded-lg shadow-md p-6 mb-6" id="eskul">
+                <h2 class="text-2xl font-bold mb-4 text-blue-600 cursor-pointer">Ekstrakurikuler</h2>
+                <ul class="list-disc pl-5">
+                    <li>Senin: Tahfidz - 10:00 WIB</li>
+                    <li>Senin: Futsal - 15:30 WIB</li>
+                    <li>Selasa: Tari - 14:00 WIB</li>
+                    <li>Selasa: Marawis Dan Basket - 15:30</li>
+                    <li>Rabu: Karate - 14:30</li>
+                    <li>Kamis: Pramuka - Pulang Sekolah</li>
+                    <li>Kamis: Paduan Suara Dan Volly - 14:30</li>
+                    <li>Jumat: Tahfidz - 13:30</li>
+                    <li>Jumat: Silat Dan Badminton - 14:00</li>
+                    <li>Sabtu: Palang Merah Remaja - 10:00</li>
+                    <li>Sabtu: Paskibra - 13:00</li>
+                </ul>
+            </div>
+        </details>
+
+        <!-- Kegiatan -->
+        <details close>
+            <summary>Informasi Tambahan</summary>
+            <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+                <h2 class="text-2xl font-bold mb-4 text-blue-600 cursor-pointer">Informasi</h2>
+                <ul class="list-disc pl-6">
+                    <li>Setiap Senin Dan Jumat Wajib Membawa Buku Cerita Dan Topi</li>
+                    <li>Setiap Rabu Wajib Membawa Baju Ganti Olahraga dan Membawa Buku Lagu</li>
+                    <li>Setiap Pakai Baju Pramuka Wajib Pakai Kacu</li>
+                    <li>Kaos Kaki Harus sesuai Dengan Harinnya </li>
+                </ul>
+            </div>
+        </details>
+
+
+        <!-- Kalkulator -->
+        <details close>
+            <summary>Kalkulator</summary>
+            <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+                <h2 class="text-2xl font-bold mb-4 text-blue-600 cursor-pointer">Kalkulator Sederhana :)</h2>
+                <ul class="list-disc pl-6">
+                    <input type="number" id="num1" placeholder="Masukkan angka pertama"
+                        class="border rounded-lg p-2 mb-2 w-full" />
+                    <input type="number" id="num2" placeholder="Masukkan angka kedua"
+                        class="border rounded-lg p-2 mb-2 w-full" />
+                    <input type="number" id="num3" placeholder="Masukkan angka ketiga (opsional)"
+                        class="border rounded-lg p-2 mb-2 w-full" />
+                    <input type="number" id="num4" placeholder="Masukkan angka keempat (opsional)"
+                        class="border rounded-lg p-2 mb-2 w-full" />
+                    <input type="number" id="num5" placeholder="Masukkan angka kelima (opsional)"
+                        class="border rounded-lg p-2 mb-2 w-full" />
+                    <input type="number" id="num6" placeholder="Masukkan angka keenam (opsional)"
+                        class="border rounded-lg p-2 mb-2 w-full" />
+                    <div class="flex space-x-2 mb-4">
+                        <button onclick="calculate('+')" class="bg-blue-600 text-white py-2 px-4 rounded">+</button>
+                        <button onclick="calculate('-')" class="bg-blue-600 text-white py-2 px-4 rounded">-</button>
+                        <button onclick="calculate('*')" class="bg-blue-600 text-white py-2 px-4 rounded">×</button>
+                        <button onclick="calculate('/')" class="bg-blue-600 text-white py-2 px-4 rounded">÷</button>
+                        <button onclick="calculate('√')" class="bg-blue-600 text-white py-2 px-4 rounded">√</button>
+                        <button onclick="calculate('^')" class="bg-blue-600 text-white py-2 px-4 rounded">^</button>
+                        <button onclick="clearInputs()" class="bg-red-600 text-white py-2 px-4 rounded">Clear</button>
+                    </div>
+                    <input type="text" id="result" placeholder="Hasil" class="border rounded-lg p-2 w-full" readonly />
+            </div>
+        </details>
+
+        <script>
+            function formatNumber(num) {
+                return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+            }
+
+            function calculate(operator) {
+                const num1 = parseFloat(document.getElementById("num1").value.replace(/\./g, "").replace(",", "."));
+                const num2 = parseFloat(document.getElementById("num2").value.replace(/\./g, "").replace(",", "."));
+                const num3 = parseFloat(document.getElementById("num3").value.replace(/\./g, "").replace(",", "."));
+                const num4 = parseFloat(document.getElementById("num4").value.replace(/\./g, "").replace(",", "."));
+                const num5 = parseFloat(document.getElementById("num5").value.replace(/\./g, "").replace(",", "."));
+                const num6 = parseFloat(document.getElementById("num6").value.replace(/\./g, "").replace(",", "."));
+                let result;
+
+                // Validate input
+                if (isNaN(num1) || (operator !== '√' && isNaN(num2))) {
+                    result = "Silakan masukkan angka yang valid";
+                } else {
+                    switch (operator) {
+                        case '+':
+                            result = num1 + num2 + (isNaN(num3) ? 0 : num3) + (isNaN(num4) ? 0 : num4) + (isNaN(num5) ? 0 : num5) + (isNaN(num6) ? 0 : num6);
+                            break;
+                        case '-':
+                            result = num1 - num2 - (isNaN(num3) ? 0 : num3) - (isNaN(num4) ? 0 : num4) - (isNaN(num5) ? 0 : num5) - (isNaN(num6) ? 0 : num6);
+                            break;
+                        case '*':
+                            result = num1 * num2 * (isNaN(num3) ? 1 : num3) * (isNaN(num4) ? 1 : num4) * (isNaN(num5) ? 1 : num5) * (isNaN(num6) ? 1 : num6);
+                            break;
+                        case '/':
+                            if (num2 === 0) {
+                                result = "Tidak dapat dibagi dengan nol";
+                            } else {
+                                result = num1 / num2; // You can add logic for more operands here if needed
+                            }
+                            break;
+                        case '√':
+                            if (num1 < 0) {
+                                result = "Tidak dapat mengambil akar dari angka negatif";
+                            } else {
+                                result = Math.sqrt(num1);
+                            }
+                            break;
+                        case '^':
+                            result = Math.pow(num1, num2);
+                            break;
+                    }
+                }
+
+                document.getElementById("result").value = formatNumber(result);
+            }
+
+            function clearInputs() {
+                document.getElementById("num1").value = "";
+                document.getElementById("num2").value = "";
+                document.getElementById("num3").value = "";
+                document.getElementById("num4").value = "";
+                document.getElementById("num5").value = "";
+                document.getElementById("num6").value = "";
+                document.getElementById("result").value = "";
+            }
+        </script>
+    </div>
+
+
+    <title>Lisensi Kelas 8.3</title>
+    <style>
+        footer {
+            text-align: center;
+            /* Mengatur teks di tengah */
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #666;
+            padding: 10px 0;
+            /* Memberikan padding vertikal */
+        }
+    </style>
+    </head>
+
+    <body>
+        <!-- Konten halaman di sini -->
+
+        <footer>
+            © 2024 Kelas 8.3. Semua hak dilindungi.
+        </footer>
+    </body>
+
+    </html>
